@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>goodbye❤️</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle at top, #1a1a2e, #000);
+    font-family: "Georgia", serif;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    text-align: center;
+    max-width: 700px;
+    padding: 40px;
+    animation: fadeIn 2s ease;
+  }
+
+  h1 {
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    opacity: 0.8;
+    margin-bottom: 40px;
+  }
+
+  button {
+    background: transparent;
+    border: 1px solid #f5f5f5;
+    color: #f5f5f5;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background: #f5f5f5;
+    color: #000;
+  }
+
+  .letter {
+    margin-top: 40px;
+    text-align: left;
+    line-height: 1.8;
+    font-size: 1.05em;
+    white-space: pre-wrap;
+    display: none;
+  }
+
+  .signature {
+    margin-top: 30px;
+    text-align: right;
+    font-style: italic;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>This page exists because you exist</h1>
+  <div class="subtitle">one last i love you ❤️</div>
+
+  <button onclick="startLetter()">Read this slowly</button>
+
+  <div id="letter" class="letter"></div>
+</div>
+
+<script>
+  const text = `
+
+
+I don’t know if you realise this,
+but some people quietly change the way a day feels.
+
+and baby, You’re one of those people.
+
+The way you talk,
+the way you care,
+the way your presence alone can calm a moment 
+it stays with me longer than words usually do.
+
+I made this because I wanted you to have
+something that exists only for you.
+No one else.
+No noise.
+Just this moment.
+
+
+Missing you comes in waves baby, and today,, im drowning 🫠❤️the amount of times I read your goodbye mssge is actually unhealthy 🥹❤️.also this was the first thing I made for you , the first code I wrote for you ig, I remember trying to learn different ways to present texts in html and me widiya igena gaddi I wanted to build something to practice but didn’t have any idea on what to do. That was the first time I thought “ill make her something” and ive been thinking that whenever I want to practice something ever since 🫠❤️.back then I thought it was something just cute but I looked at the stars a little too longer and thought about you a little too often to not call it love❤️.loving you was easy because you’re…you ❤️thanks for coming into my life babe, and letting me love and loving me.if life was a movie , trust me…you are the part ill be rewinding the again and again to watch❤️.all those times we walked side by side, how you clung to my arm, those cute little bitesss,how our legs were all tangled under the table….ill be thinking of them as long as time lasts.always remember my heart holds you when my arms cannot❤️goodbyeeee modasssssss mwaaahhhhh❤️.<br>ill imagine you in every empty seat I sit beside❤️`;
+
+  let index = 0;
+
+  function startLetter() {
+    const letterDiv = document.getElementById("letter");
+    letterDiv.style.display = "block";
+
+    const interval = setInterval(() => {
+      letterDiv.textContent += text[index];
+      index++;
+
+      if (index >= text.length) {
+        clearInterval(interval);
+        letterDiv.innerHTML += `
+          <div class="signature">
+            — Chiran(daddy bunis)
+          </div>
+        `;
+      }
+    }, 40);
+
+    document.querySelector("button").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
